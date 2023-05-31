@@ -4,13 +4,14 @@ import "./App.css";
 import ShoppingList from "./components/ShoppingList";
 import Item from "./models/item";
 import ShoppingListForm from "./ShoppingListForm";
+import { v4 as getId } from "uuid";
 
 function App() {
 	const [items, setItems] = useState<Item[]>([]);
 
 	//add items to the useState
-	const addItem = (product: string) => {
-		setItems([...items, { id: 3, product, quantity: 2 }]);
+	const addItem = (product: string, quantity: number) => {
+		setItems([...items, { id: getId(), product, quantity }]);
 	};
 	// const items = [
 	// 	{
