@@ -18,7 +18,6 @@ function Greeter({ person }: GreeterProps) {
 	return (
 		<>
 			<h1>Hello {person}!</h1>
-			<p>Welcome to the world of React!</p>
 		</>
 	);
 }
